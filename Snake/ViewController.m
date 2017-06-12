@@ -33,7 +33,6 @@
 - (UIImageView *)food {
     if (!_food) {
         _food = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, NodeWH, NodeWH)];
-        _food.image = [UIImage imageNamed:@"food"];
         _food.backgroundColor = [UIColor redColor];
         [_gameView addSubview:_food];
     }
@@ -54,6 +53,8 @@
     [self createFood];
 }
 
+
+#pragma mark - 食物创建
 - (void)createFood {
     int x = (arc4random() % (NSInteger)_gameView.bounds.size.width / NodeWH) * NodeWH + NodeWH * 0.5;
     int y = (arc4random() % (NSInteger)_gameView.bounds.size.height / NodeWH) * NodeWH + NodeWH * 0.5;
@@ -67,7 +68,7 @@
     self.food.center = center;
 }
 
-
+#pragma mark - 食物被吃
 - (void)isEatedFood {
     if (CGPointEqualToPoint(_food.center, _snake.nodes.firstObject.coordinate)) {
         NSInteger score = [_scoreLabel.text substringFromIndex:3].intValue + 1;
@@ -82,6 +83,7 @@
     }
 }
 
+#pragma mark - 判断游戏是否结束
 - (void)isDestroy {
     Node *head = _snake.nodes.firstObject;
     for (int i = 1; i < _snake.nodes.count; i++) {
@@ -90,6 +92,7 @@
             [self gameOver];
         }
     }
+    //超过游戏视图区域
     if (head.coordinate.x < 5 || head.coordinate.x > _gameView.bounds.size.width - 5) {
         [self gameOver];
     }
@@ -98,6 +101,7 @@
     }
 }
 
+#pragma mark - 游戏结束
 - (void)gameOver {
     [_snake pause];
     //
@@ -117,12 +121,14 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+#pragma mark - 上下左右按钮点击
 - (IBAction)btnClick:(UIButton *)sender {
     if (self.startBtn.selected) {
         self.snake.direction = (MoveDirection)sender.tag;
     }
 }
 
+#pragma mark - 开始或者暂停按钮点击
 - (IBAction)startOrPause:(UIButton *)sender {
     if (sender.selected) {
         [_snake pause];
