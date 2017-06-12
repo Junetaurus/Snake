@@ -10,4 +10,10 @@
 
 @implementation Node
 
++ (instancetype)nodeWithCoordinate:(CGPoint)coordinate {
+    Node *node = [[Node alloc] init];
+    node.coordinate = coordinate;
+    return node;
+}
+
 @end
