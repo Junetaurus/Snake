@@ -57,16 +57,14 @@
                                     <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="32N-La-eob"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="等级：0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uei-xi-xf9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等级：0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uei-xi-xf9">
                                 <rect key="frame" x="302.5" y="641" width="62.5" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99215686274509807" green="0.94509803921568625" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="分数：0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gM-yN-Rna">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分数：0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gM-yN-Rna">
                                 <rect key="frame" x="10" y="641" width="62.5" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99215686274509807" green="0.94509803921568625" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -108,6 +106,7 @@
                             <constraint firstItem="1qf-K4-z8P" firstAttribute="centerY" secondItem="qgG-Jh-SAY" secondAttribute="centerY" id="4ws-Aa-8tM"/>
                             <constraint firstItem="WEI-SE-DKx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EVh-2i-dUB"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WEI-SE-DKx" secondAttribute="bottom" constant="20" id="FEU-lB-ZlL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7gM-yN-Rna" secondAttribute="bottom" constant="5" id="JI1-7q-2TJ"/>
                             <constraint firstItem="yxD-CG-zUb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KYn-gr-dd4"/>
                             <constraint firstAttribute="trailing" secondItem="HdH-AM-D1B" secondAttribute="trailing" constant="16" id="MlB-67-hPh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F4A-fW-tZR" secondAttribute="bottom" constant="184" id="NI7-H6-RTF"/>
@@ -115,8 +114,11 @@
                             <constraint firstItem="HdH-AM-D1B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="OtD-gK-rM0"/>
                             <constraint firstItem="yxD-CG-zUb" firstAttribute="top" secondItem="F4A-fW-tZR" secondAttribute="bottom" constant="8" id="PZ2-LX-ulp"/>
                             <constraint firstItem="F4A-fW-tZR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rhw-Kd-r8d"/>
+                            <constraint firstItem="7gM-yN-Rna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="SYQ-Bp-Fel"/>
+                            <constraint firstAttribute="trailing" secondItem="uei-xi-xf9" secondAttribute="trailing" constant="10" id="Wfj-LH-EfP"/>
                             <constraint firstItem="h3Y-BK-FRq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XFD-dQ-yGN"/>
                             <constraint firstAttribute="trailing" secondItem="h3Y-BK-FRq" secondAttribute="trailing" id="ZLY-fT-mvc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uei-xi-xf9" secondAttribute="bottom" constant="5" id="cG4-0M-lW2"/>
                             <constraint firstItem="HdH-AM-D1B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="fQN-yR-jgX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qgG-Jh-SAY" secondAttribute="bottom" constant="69" id="gih-Nf-Epl"/>
                             <constraint firstAttribute="trailing" secondItem="1qf-K4-z8P" secondAttribute="trailing" constant="80" id="gkz-TH-hH9"/>
