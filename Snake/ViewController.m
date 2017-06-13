@@ -33,9 +33,11 @@
 - (UIImageView *)food {
     if (!_food) {
         _food = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, NodeWH, NodeWH)];
-        _food.backgroundColor = [UIColor redColor];
+        _food.layer.masksToBounds = YES;
+        _food.layer.cornerRadius = NodeWH / 2;
         [_gameView addSubview:_food];
     }
+    _food.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
     return _food;
 }
 

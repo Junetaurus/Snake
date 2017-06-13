@@ -9,6 +9,8 @@
 #import "GameInterfaceView.h"
 #import "Snake.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 @implementation GameInterfaceView
 
 - (void)drawRect:(CGRect)rect {
@@ -17,7 +19,7 @@
     CGPoint center = _snake.nodes.firstObject.coordinate;
     UIBezierPath *bezierPath = [UIBezierPath bezierPath];
     [self drawHead:bezierPath center:center];
-    [[UIColor greenColor] set];
+    [UIColorFromRGB(0xfdf156) set];
     [bezierPath setLineWidth:1];
     [bezierPath fill];
     for (int i = 1; i < _snake.nodes.count; i++) {
@@ -55,12 +57,5 @@
             break;
     }
 }
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    self.layer.borderWidth = 1;
-    self.layer.borderColor = [UIColor colorWithWhite:0 alpha:0.1].CGColor;
-}
-
 
 @end
