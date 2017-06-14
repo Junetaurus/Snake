@@ -19,6 +19,7 @@
 
 @property (nonatomic, strong) Snake *snake;
 @property (nonatomic, strong) UIImageView *food;
+@property (nonatomic, strong) NSArray *foodColorArray;
 @property (nonatomic, assign) BOOL isGameOver;
 //
 @property (weak, nonatomic) IBOutlet GameInterfaceView *gameView;
@@ -37,10 +38,16 @@
         _food.layer.cornerRadius = NodeWH / 2;
         [_gameView addSubview:_food];
     }
-    _food.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
+    _food.backgroundColor = self.foodColorArray[arc4random() % self.foodColorArray.count];
     return _food;
 }
 
+- (NSArray *)foodColorArray {
+    if (!_foodColorArray) {
+        _foodColorArray = [NSArray arrayWithObjects:[UIColor greenColor],[UIColor blueColor],[UIColor blackColor],[UIColor yellowColor],[UIColor orangeColor],[UIColor purpleColor], nil];
+    }
+    return _foodColorArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
