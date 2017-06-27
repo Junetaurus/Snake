@@ -85,7 +85,19 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdH-AM-D1B" customClass="GameInterfaceView">
                                 <rect key="frame" x="16" y="70" width="343" height="329"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box" translatesAutoresizingMaskIntoConstraints="NO" id="az9-3S-KVh">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="329"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="az9-3S-KVh" firstAttribute="leading" secondItem="HdH-AM-D1B" secondAttribute="leading" id="5j6-yr-lor"/>
+                                    <constraint firstAttribute="bottom" secondItem="az9-3S-KVh" secondAttribute="bottom" id="G28-x1-r28"/>
+                                    <constraint firstAttribute="trailing" secondItem="az9-3S-KVh" secondAttribute="trailing" id="OIM-0J-XEi"/>
+                                    <constraint firstItem="az9-3S-KVh" firstAttribute="top" secondItem="HdH-AM-D1B" secondAttribute="top" id="hui-c6-rOR"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qf-K4-z8P">
                                 <rect key="frame" x="237" y="540" width="58" height="58"/>
@@ -139,6 +151,7 @@
     </scenes>
     <resources>
         <image name="background" width="375" height="667"/>
+        <image name="box" width="343" height="330"/>
         <image name="down" width="50" height="56"/>
         <image name="left" width="50" height="56"/>
         <image name="pause" width="204" height="56"/>
